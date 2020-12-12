@@ -10,86 +10,79 @@ using RestSharp.Authenticators;
 using NUnit.Framework;
 using System.Net;
 using Newtonsoft.Json;
+using AutomationProject_CSharp.Extensions;
+using AutomationProject_CSharp.WorkFlows;
 
 namespace AutomationProject_CSharp.ApiSteps
 {
     [Binding]
     public class UsersSteps : commonOps
     {
-
-
-        //[When(@"I send a GET request to")]
-        //public void WhenISendAGETRequestTo(Table table)
-        //{
-        //    dynamic data = table.CreateDynamicInstance();
-        //    client = new RestClient(getData("Url_API") + data.API_Service);            
-        //    client.Authenticator = new HttpBasicAuthenticator(getData("user_API"), getData("password_API"));
-        //    httpRequest = new RestRequest(Method.GET);
-        //    response = client.Execute(httpRequest);
-        //    statusCode = response.StatusCode;
-        //}
+        dynamic usersList;
 
         [When(@"I send a GET request to ""(.*)""")]
         public void WhenISendAGETRequestTo(string api_ServiceUrl)
         {
-            httpRequest = new RestRequest(api_ServiceUrl, Method.GET);
-            response = client.Execute(httpRequest);
-            statusCode = response.StatusCode;
-
+            usersList = apiFlows.getUserProperty(api_ServiceUrl);
         }
 
+        [Then(@"I print the first user details")]
+        public void ThenIPrintTheFirstUserDetails()
+        {
+            Console.WriteLine(usersList[0]);
+        }
 
+        [Then(@"I print user details where id is ""(.*)""")]
+        public void ThenIPrintUserDetailsWhereIdIs(int id)
+        {
+            for (int i = 0; ; i++)
+            {
+                if (usersList[i].id == id)
+                {
+                    logger = usersList[i];
+                    Console.WriteLine(usersList[i]);
+                    break;
+                }
+            }
+        }
 
         [Then(@"I get OK response")]
         public void ThenIGetOKResponse()
         {
-           
-            Assert.AreEqual(HttpStatusCode.OK, statusCode);
-
+            verifications.statusCodeIn(HttpStatusCode.OK, statusCode);
         }
 
         [When(@"I send a POST request to ""(.*)"" with the following params")]
         public void WhenISendAPOSTRequestToWithTheFollowingParams(string api_ServiceUrl, Table table)
         {
-            dynamic data = table.CreateDynamicInstance();           
-            httpRequest = new RestRequest(api_ServiceUrl, Method.POST);
-            httpRequest.AddHeader("Content-Type", "application/json");
-            httpRequest.RequestFormat = DataFormat.Json;
-            httpRequest.AddJsonBody(new { data.Name, data.Email, data.Login, data.Password});
-            response = client.Execute(httpRequest);
-            statusCode = response.StatusCode;
+            dynamic data = table.CreateDynamicInstance();
+            apiFlows.postUser(data.Name, data.Email, data.Login, data.Password);
+
         }
 
         [When(@"I send a PUT request to ""(.*)"" with the following params")]
         public void WhenISendAPUTRequestToWithTheFollowingParams(string api_ServiceUrl, Table table)
         {
+            usersList = apiFlows.getUserProperty(api_ServiceUrl);
             dynamic data = table.CreateDynamicInstance();
-            httpRequest = new RestRequest(api_ServiceUrl, Method.PUT);
-            httpRequest.AddHeader("Content-Type", "application/json");
-            httpRequest.RequestFormat = DataFormat.Json;
-            httpRequest.AddJsonBody(new { data.Name, data.Email, data.Login, data.Password });
-            response = client.Execute(httpRequest);
-            statusCode = response.StatusCode;
-
+            apiFlows.updateUser(api_ServiceUrl, data.Name, data.Email, data.Login, data.Password);
         }
 
         [Then(@"I verify that the user name in ""(.*)"" was updated to ""(.*)""")]
-        public void ThenIVerifyThatTheUserNameInWasUpdatedTo(string api_ServiceUrl, string name)
+        public void ThenIVerifyThatTheUserNameinWasUpdatedTo(string api_ServiceUrl, string name)
         {
-            httpRequest = new RestRequest(api_ServiceUrl, Method.GET);
-            response = client.Execute(httpRequest);
-            dynamic jsonResponse = JsonConvert.DeserializeObject(response.Content);           
-            string userName = jsonResponse.name;
-            Assert.AreEqual(name, userName);
+            string username = string.Empty;
+
+            usersList = apiFlows.getUserProperty(api_ServiceUrl);
+            username = usersList.name;
+            verifications.text(name, username);           
         }
-       
+
 
         [When(@"I send a DELETE request to ""(.*)""")]
         public void WhenISendADELETERequestTo(string api_ServiceUrl)
         {
-            httpRequest = new RestRequest(api_ServiceUrl, Method.DELETE);
-            response = client.Execute(httpRequest);
-            statusCode = response.StatusCode;
+            apiFlows.deleteUser(api_ServiceUrl);
         }
 
 

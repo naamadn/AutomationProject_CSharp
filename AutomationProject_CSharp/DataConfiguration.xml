@@ -7,7 +7,7 @@
     <password_API>admin</password_API>
 
     <!-- Platform -->
-    <PlatformName>Web</PlatformName>
+    <PlatformName>api</PlatformName>
     <!-- Web -->
     <WebsiteUrl>http://automationpractice.com/index.php</WebsiteUrl> 
     <BrowserName>Chrome</BrowserName>

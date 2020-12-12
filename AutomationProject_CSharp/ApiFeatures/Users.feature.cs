@@ -108,6 +108,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Then("I get OK response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+#line 8
+ testRunner.And("I print user details where id is \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -121,7 +124,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "Sanity_API"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create User", null, tagsOfScenario, argumentsOfScenario);
-#line 10
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -147,14 +150,14 @@ this.ScenarioInitialize(scenarioInfo);
                             "Login",
                             "Password"});
                 table1.AddRow(new string[] {
-                            "User7",
-                            "User7@user.com",
-                            "User7",
-                            "abc123"});
-#line 11
+                            "User25",
+                            "User25@user.com",
+                            "User25",
+                            "abc25"});
+#line 13
  testRunner.When("I send a POST request to \"/api/admin/users\" with the following params", ((string)(null)), table1, "When ");
 #line hidden
-#line 14
+#line 16
  testRunner.Then("I get OK response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -170,7 +173,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "Sanity_API"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update User", null, tagsOfScenario, argumentsOfScenario);
-#line 18
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -196,14 +199,14 @@ this.ScenarioInitialize(scenarioInfo);
                             "Login",
                             "Password"});
                 table2.AddRow(new string[] {
-                            "User6",
+                            "User88",
                             "User5@user.com",
-                            "User5",
+                            "User12345",
                             "abc123"});
-#line 19
- testRunner.When("I send a PUT request to \"/api/users/12\" with the following params", ((string)(null)), table2, "When ");
+#line 21
+ testRunner.When("I send a PUT request to \"/api/users/2\" with the following params", ((string)(null)), table2, "When ");
 #line hidden
-#line 22
+#line 24
  testRunner.Then("I get OK response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -219,7 +222,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "Sanity_API"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete User", null, tagsOfScenario, argumentsOfScenario);
-#line 25
+#line 27
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -239,10 +242,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 26
- testRunner.When("I send a DELETE request to \"/api/admin/users/13\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
+ testRunner.When("I send a DELETE request to \"/api/admin/users/5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 27
+#line 29
  testRunner.Then("I get OK response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -258,7 +261,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "Sanity_API"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Updated User Name", null, tagsOfScenario, argumentsOfScenario);
-#line 31
+#line 33
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -284,15 +287,15 @@ this.ScenarioInitialize(scenarioInfo);
                             "Login",
                             "Password"});
                 table3.AddRow(new string[] {
-                            "User100",
-                            "User100@user.com",
-                            "User5",
+                            "User89",
+                            "User5@user.com",
+                            "User12345",
                             "abc123"});
-#line 32
- testRunner.When("I send a PUT request to \"/api/users/12\" with the following params", ((string)(null)), table3, "When ");
+#line 34
+ testRunner.When("I send a PUT request to \"/api/users/2\" with the following params", ((string)(null)), table3, "When ");
 #line hidden
-#line 35
- testRunner.Then("I verify that the user name in \"/api/users/12\" was updated to \"User100\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 37
+ testRunner.Then("I verify that the user name in \"/api/users/2\" was updated to \"User89\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

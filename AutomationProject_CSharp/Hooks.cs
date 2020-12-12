@@ -96,7 +96,13 @@ namespace AutomationProject_CSharp
                 else if (stepType == "When")
                     scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text);
                 else if (stepType == "Then")
-                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text);
+                {
+                    if (logger == null)
+                        scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text);
+                    else
+                        scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Info(logger.ToString());
+
+                }
                 else if (stepType == "And")
                     scenario.CreateNode<And>(ScenarioStepContext.Current.StepInfo.Text);
             }

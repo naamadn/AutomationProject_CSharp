@@ -90,6 +90,7 @@ namespace AutomationProject_CSharp.Utilities
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Double.Parse(getData("TimeOut"))));
             action = new Actions(driver);
             managePages.init();
+            logger = null;
         }
 
         public IWebDriver initChromeDriver()
@@ -101,7 +102,8 @@ namespace AutomationProject_CSharp.Utilities
         public static void initAPI()
         {           
             client = new RestClient(getData("Url_API"));
-            client.Authenticator = new HttpBasicAuthenticator(getData("user_API"), getData("password_API"));
+            client.Authenticator = new HttpBasicAuthenticator(getData("user_API"), getData("password_API")); 
+            logger = null;
         }
 
 
