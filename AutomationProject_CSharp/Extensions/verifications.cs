@@ -11,10 +11,8 @@ namespace AutomationProject_CSharp.Extensions
     public class verifications : commonOps
     {
         public static void textInElement(IWebElement elem, String expectedValue)
-        {
-            // assertEquals(elem.Text, expectedValue);
+        {           
             Assert.AreEqual(elem.Text, expectedValue);
-
         }
 
         public static void text(String actualText, String expectedText)
