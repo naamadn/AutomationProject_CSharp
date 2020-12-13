@@ -26,8 +26,8 @@ namespace AutomationProject_CSharp.WorkFlows
             uiActions.checkItemInCheckBox(summerDresses_Page.chkbox_smallSize);
             uiActions.checkItemInCheckBox(summerDresses_Page.chk_inStock);
             uiActions.updateDropDown(summerDresses_Page.dropdown_sortBy, "Price: Lowest first");
-            uiActions.click(driver.FindElement(By.XPath("//*[@id='center_column']/ul/li[1]/div/div[1]/div/a[1]/img")));
-            uiActions.click(driver.FindElement(By.XPath("//*[@id='add_to_cart']/button/span")));          
+            uiActions.click(summerDresses_Page.Model_demo_5);
+            uiActions.click(ShoppingCart_Page.btn_Add_To_Cart);       
             uiActions.click(summerDresses_Page.btn_proceedToCheckout);         
             uiActions.click(ShoppingCart_Page.btn_proceedToCheckOut);
             uiActions.click(addresses_Page.btn_proceedToCheckout);            

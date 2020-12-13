@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AutomationProject_CSharp.PageObjects
 {
-    public class summerDressesPage: commonOps
+    public class summerDressesPage : commonOps
     {
         public IWebElement chkbox_smallSize
         {
@@ -33,8 +33,8 @@ namespace AutomationProject_CSharp.PageObjects
         {
             get
             {
-               return driver.FindElements(By.XPath("//div[@class = 'product-container']"));
-               
+                return driver.FindElements(By.XPath("//div[@class = 'product-container']"));
+
             }
         }
 
@@ -52,5 +52,16 @@ namespace AutomationProject_CSharp.PageObjects
                 return driver.FindElement(By.XPath("//a[@class = 'btn btn-default button button-medium']"));
             }
         }
+
+        public IWebElement Model_demo_5
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//*[@id='center_column']/ul/li[1]/div/div[1]/div/a[1]/img"));
+            }
+        }
+
+
+
     }
 }
