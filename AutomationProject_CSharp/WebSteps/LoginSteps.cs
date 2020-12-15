@@ -17,15 +17,9 @@ namespace AutomationProject_CSharp
      
         [Given(@"I launch the website login page")]
         public void GivenILaunchTheLoginPage()
-        {           
-            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?controller=authentication&back=my-account");
-        }
-
-        [Given(@"I navigate to login form")]
-        public void GivenIClickLoginLink()
-        {
-            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?controller=authentication&back=my-account");
-        }
+        {          
+          uiActions.navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+        }        
 
         [Given(@"I enter the following details and click on login button")]
         public void GivenIEnterTheFollowingDetails(Table table)
@@ -44,8 +38,8 @@ namespace AutomationProject_CSharp
         [Then(@"I should see my account")]
         public void ThenIShouldSeeMyAccount()
         {
-            verifications.textInElement(driver.FindElement(By.XPath("//h1[@class = 'page-heading']")), "MY ACCOUNT");
-           
+            //verifications.textInElement(driver.FindElement(By.XPath("//h1[@class = 'page-heading']")), "MY ACCOUNT");
+            verifications.textInElement(myAccount_Page.title_myaccount, "MY ACCOUNT");
         }
 
 

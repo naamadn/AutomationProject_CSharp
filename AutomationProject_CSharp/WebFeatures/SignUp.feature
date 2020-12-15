@@ -8,8 +8,8 @@ Scenario: Sign up to website_positive
 		| Email            |
 		| ert@hfr12349.com | 
 	And I create an account with the following details
-	| Title |  First Name | Last Name | Password | Address      | City            | State           | Zip      | Phone          |
-	|Mrs    |  Donna      | Martin    | 98765    | Beverly Hills |  Los Angeles    | California      |  90210  |   032567890    |
+	| Title |  First Name | Last Name | Password | Address       | City            | State           | Zip      | Phone          |
+	|Mrs    |  Donna      | Martin    | 98765    | Beverly Hills |  Los Angeles   | California     |  90210  |   032567890    |
 	Then I go to my account
 
 @Sanity_Web

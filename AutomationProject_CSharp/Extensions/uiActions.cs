@@ -49,7 +49,7 @@ namespace AutomationProject_CSharp.Extensions
         public static void addToCart(IWebElement elem)
         {
             uiActions.mouseHoverElements(elem, summerDresses_Page.btn_addToCart);
-        }
+        }       
 
     }
 }

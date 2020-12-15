@@ -20,7 +20,7 @@ Scenario: Create User
 Scenario: Update User
 	When I send a PUT request to "/api/users/2" with the following params
 	| Name  | Email               | Login     | Password |
-	| User88   | User5@user.com   | User12345 | abc123  |
+	| User88   | User5@user.com   | User12345 | abc123   |
 	Then I get OK response
 
 	@Sanity_API

@@ -12,7 +12,7 @@ namespace AutomationProject_CSharp.Extensions
     {
         public static void textInElement(IWebElement elem, String expectedValue)
         {           
-            Assert.AreEqual(elem.Text, expectedValue);
+            Assert.AreEqual(expectedValue, elem.Text); 
         }
 
         public static void text(String actualText, String expectedText)
