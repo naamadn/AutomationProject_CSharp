@@ -21,22 +21,21 @@ namespace AutomationProject_CSharp.WorkFlows
 
         public static void perchase()
         {
-            IList<IWebElement> listOfItems = summerDresses_Page.listOfProducts;
             uiActions.mouseHoverElements(catalogTopMenu_Page.opt_dresses, catalogTopMenu_Page.opt_summerDresses);
             uiActions.checkItemInCheckBox(summerDresses_Page.chkbox_smallSize);
             uiActions.checkItemInCheckBox(summerDresses_Page.chk_inStock);
             uiActions.updateDropDown(summerDresses_Page.dropdown_sortBy, "Price: Lowest first");
             uiActions.click(summerDresses_Page.Model_demo_5);
-            uiActions.click(ShoppingCart_Page.btn_Add_To_Cart);       
-            uiActions.click(summerDresses_Page.btn_proceedToCheckout);         
+            uiActions.click(ShoppingCart_Page.btn_Add_To_Cart);
+            uiActions.click(summerDresses_Page.btn_proceedToCheckout);
             uiActions.click(ShoppingCart_Page.btn_proceedToCheckOut);
-            uiActions.click(addresses_Page.btn_proceedToCheckout);            
+            uiActions.click(addresses_Page.btn_proceedToCheckout);
             uiActions.click(Shipping_Page.chkbox_termOfService);
             uiActions.click(Shipping_Page.btn_proceedToCheckout);
             uiActions.click(paymentMethod_Page.btn_payByBankWire);
             uiActions.click(orderSummery_Page.btn_confirm);
 
-        }
+        }       
 
         public static void signUp(string email)
         {

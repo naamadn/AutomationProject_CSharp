@@ -19,27 +19,15 @@ using OpenQA.Selenium.Interactions;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Edge;
+
 
 namespace AutomationProject_CSharp.Utilities
 {
   
     public class commonOps: Base
-    {
-
-        public static void initFromJson()
-        {
-            
-          //  JObject obj = JObject.Parse(@"C:\Users\naamadn\Documents\OOP\AutomationProject_CSharp\AutomationProject_CSharp\AutomationProject_CSharp\appSettings.json");
-          //   PlatformType = (string)obj["PlatformType"];
-
-            var myJsonString = File.ReadAllText(@"C:\Users\naamadn\Documents\OOP\AutomationProject_CSharp\AutomationProject_CSharp\AutomationProject_CSharp\appSettings.json");
-            var myJObject = JObject.Parse(myJsonString);
-            //  Console.WriteLine(myJObject.SelectToken("MyStringProperty").Value<string>());
-           
-            // PlatformType = (string)myJObject["PlatformType"];
-
-        }
-
+    {       
         public static string getData(String nodeName)
         {            
             XmlDocument doc = new XmlDocument();
@@ -54,7 +42,6 @@ namespace AutomationProject_CSharp.Utilities
             return node.InnerText.ToString();                       
 
         }
-
 
         
         public void startSession()
@@ -78,9 +65,11 @@ namespace AutomationProject_CSharp.Utilities
             {
                 case "chrome":
                     driver = initChromeDriver();
-                    break;              
-                 
-                    
+                    break;
+                case "firefox":
+                    driver = initFireFoxDriver();
+                    break;               
+
             }
 
             driver.Manage().Window.Maximize();
@@ -98,6 +87,15 @@ namespace AutomationProject_CSharp.Utilities
             IWebDriver driver = new ChromeDriver(getData("ChromeDriverLocation"));
             return driver;
         }
+
+        public IWebDriver initFireFoxDriver()
+        {
+            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(getData("FireFoxDriverLocation"));
+            service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
+            FirefoxDriver driver = new FirefoxDriver(service);
+            return driver;
+        }
+       
 
         public static void initAPI()
         {           

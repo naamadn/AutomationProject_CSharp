@@ -25,6 +25,11 @@ namespace AutomationProject_CSharp.Extensions
             Assert.AreEqual(expectedCode, actualCode);
         }
 
+        public static void isSelected(IWebElement elem)
+        {
+            Assert.True(elem.Selected);
+        }
+
 
     }
 }
