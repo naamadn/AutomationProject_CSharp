@@ -11,9 +11,9 @@
     <!-- Web -->
     <WebsiteUrl>http://automationpractice.com/index.php</WebsiteUrl> 
     <BrowserName>Chrome</BrowserName>
-  <ChromeDriverLocation>C:/Users/naama/Documents/OOP/AutomationProject_CSharp2/ChromeDriver</ChromeDriverLocation>
-  <FireFoxDriverLocation>C:/Users/naama/Documents/OOP/AutomationProject_CSharp2/FireFoxDriver</FireFoxDriverLocation>
-  <EdgeDriverLocation>C:/Users/naama/Documents/OOP/AutomationProject_CSharp2/EdgeDriver/msedgedriver.exe</EdgeDriverLocation>
+  <ChromeDriverLocation>C:/ChromeDriver</ChromeDriverLocation>
+  <FireFoxDriverLocation>C:/FireFoxDriver</FireFoxDriverLocation>
+  <EdgeDriverLocation>C:/EdgeDriver/msedgedriver.exe</EdgeDriverLocation>
     <!-- API -->
     <Url_API>http://localhost:3000</Url_API>
   
