@@ -56,8 +56,10 @@ namespace AutomationProject_CSharp.Utilities
             {
                 initAPI();
             }
+            manageDB.initConnection(getData("dbUrl"), getData("dbName"), getData("dbUser"), getData("dbPassword"));
+
         }
-      
+
 
         private void initBrowser(string browserType)
         {

@@ -13,6 +13,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium.Interactions;
 using System.Net;
+using MySqlConnector;
 
 namespace AutomationProject_CSharp.Utilities
 {
@@ -53,6 +54,8 @@ namespace AutomationProject_CSharp.Utilities
         //  public static Guid g = new Guid();
         public static string screenShot = string.Empty;
         public static dynamic logger;
+
+        public static MySqlConnection conn;
 
 
 

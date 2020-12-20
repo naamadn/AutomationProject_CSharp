@@ -16,5 +16,10 @@
   <EdgeDriverLocation>C:/EdgeDriver/msedgedriver.exe</EdgeDriverLocation>
     <!-- API -->
     <Url_API>http://localhost:3000</Url_API>
-  
+  <!--DB-->
+  <dbUrl>SERVER=remotemysql.com;</dbUrl>
+  <dbName>DATABASE=sQWeIs4tri;</dbName>
+  <dbUser>UID=sQWeIs4tri;</dbUser>
+  <dbPassword>Pwd=da6GCXbGNU;</dbPassword>
+
 </Environment>
