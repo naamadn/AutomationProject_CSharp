@@ -108,7 +108,7 @@ this.ScenarioInitialize(scenarioInfo);
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email"});
                 table6.AddRow(new string[] {
-                            "ert@hfr12349.com"});
+                            "ert@hfr1234901.com"});
 #line 7
  testRunner.When("I sign up to website with the following email", ((string)(null)), table6, "When ");
 #line hidden

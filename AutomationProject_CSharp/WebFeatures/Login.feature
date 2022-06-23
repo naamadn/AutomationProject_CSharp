@@ -10,7 +10,7 @@ Scenario: perform login to website positive
 	Then I should see my account
 
 
-	@Sanity_Web
+	@Sanity_Web	
 	Scenario: perform login to website negative
 	Given I launch the website login page
 	And I enter the following details and click on login button

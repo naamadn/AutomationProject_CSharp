@@ -6,9 +6,12 @@
 #	When I perform a purchase as a logged user	
 #	Then I get order complete message
 
+
+
 @Sanity_Web
 Scenario: Perform a purchase as a logged user	
-	When I login with valid credentials
+	#When I login with valid credentials
+	When I login with valid
 	And I mouse hover Dresses and select Summer Dresses
 	And I filter by small size
 	And I filter by in stock items
@@ -17,6 +20,6 @@ Scenario: Perform a purchase as a logged user
 	And I add item to cart
 	And I proceed to checkout
 	And I accept the terms of service and checkout
-	And select paying method of BankWire
+	And I select paying method of BankWire
 	And I confirm my order
 	Then I get order complete message

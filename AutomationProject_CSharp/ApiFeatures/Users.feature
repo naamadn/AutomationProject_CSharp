@@ -5,7 +5,7 @@
 Scenario: Get List Of Users	
 	When I send a GET request to "/api/users/"
 	Then I get OK response
-	And I print user details where id is "2"
+	And I print user details where id is "4"
 
 
 @Sanity_API

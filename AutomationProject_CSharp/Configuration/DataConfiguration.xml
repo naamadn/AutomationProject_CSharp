@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Environment>
+    <!-- TimeOut -->
+    <TimeOut>5</TimeOut>
+    <!-- API credentials -->
+    <user_API>admin</user_API>
+    <password_API>admin</password_API>
+
+    <!-- Platform -->
+    <PlatformName>Web</PlatformName>
+    <!-- Web -->
+    <WebsiteUrl>http://automationpractice.com/index.php</WebsiteUrl> 
+    <BrowserName>Chrome</BrowserName>
+  <ChromeDriverLocation>C:/Users/naama/Documents/OOP/AutomationProject_CSharp2/AutomationProject_CSharp/AutomationProject_CSharp/ChromeDriver/</ChromeDriverLocation>
+  <FireFoxDriverLocation>C:/FireFoxDriver</FireFoxDriverLocation>
+  <EdgeDriverLocation>C:/EdgeDriver/msedgedriver.exe</EdgeDriverLocation>
+    <!-- API -->
+    <Url_API>http://localhost:3000</Url_API>
+  <!--DB-->
+  <dbUrl>SERVER=remotemysql.com;</dbUrl>
+  <dbName>DATABASE=sQWeIs4tri;</dbName>
+  <dbUser>UID=sQWeIs4tri;</dbUser>
+  <dbPassword>Pwd=da6GCXbGNU;</dbPassword>
+
+</Environment>

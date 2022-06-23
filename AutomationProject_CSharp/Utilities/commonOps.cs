@@ -32,7 +32,7 @@ namespace AutomationProject_CSharp.Utilities
         {            
             XmlDocument doc = new XmlDocument();
             string newNodeName;
-            using (StreamReader streamReader = new StreamReader(@"C:\Users\naama\Documents\OOP\AutomationProject_CSharp2\AutomationProject_CSharp\AutomationProject_CSharp\DataConfiguration.xml", Encoding.UTF8))
+            using (StreamReader streamReader = new StreamReader(@"C:\Users\naama\Documents\OOP\AutomationProject_CSharp2\AutomationProject_CSharp\AutomationProject_CSharp\Configuration\DataConfiguration.xml", Encoding.UTF8))
             {
                 newNodeName = streamReader.ReadToEnd();
             }
@@ -44,7 +44,7 @@ namespace AutomationProject_CSharp.Utilities
         }
 
         
-        public void startSession()
+        public static void startSession()
         {
 
             if (getData("PlatformName").Equals("Web"))
@@ -61,7 +61,7 @@ namespace AutomationProject_CSharp.Utilities
         }
 
 
-        private void initBrowser(string browserType)
+        private static void initBrowser(string browserType)
         {
             switch (browserType.ToLower())
             {
@@ -84,13 +84,13 @@ namespace AutomationProject_CSharp.Utilities
             logger = null;
         }
 
-        public IWebDriver initChromeDriver()
+        public static IWebDriver initChromeDriver()
         {            
             IWebDriver driver = new ChromeDriver(getData("ChromeDriverLocation"));
             return driver;
         }
 
-        public IWebDriver initFireFoxDriver()
+        public static IWebDriver initFireFoxDriver()
         {
             FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(getData("FireFoxDriverLocation"));
             service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
@@ -107,7 +107,7 @@ namespace AutomationProject_CSharp.Utilities
         }
 
 
-        public void CloseSession()
+        public static void CloseSession()
         {
             if (!getData("PlatformName").Equals("api"))
                 driver.Quit();

@@ -75,6 +75,13 @@ namespace AutomationProject_CSharp
         {
             //Create dynamic feature name          
             featureName = extent.CreateTest<Feature>(FeatureContext.Current.FeatureInfo.Title);
+            startSession();
+        }
+
+        [AfterFeature]
+        public static void AfterFeature()
+        {
+            CloseSession();
         }
 
         
@@ -150,7 +157,7 @@ namespace AutomationProject_CSharp
         {
             //Create dynamic scenario name
             scenario = featureName.CreateNode<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
-            startSession();
+           // startSession();
         }
 
         [AfterScenario]
@@ -161,7 +168,7 @@ namespace AutomationProject_CSharp
                 string screenshotpath = Capture(driver, screenShot);
                featureName.AddScreenCaptureFromPath(screenshotpath);              
             }
-            CloseSession();
+           // CloseSession();
 
         }
 

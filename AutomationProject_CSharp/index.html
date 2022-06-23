@@ -52,7 +52,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">20/12/2020 20:04:03</span>
+                    <span class="badge badge-primary">31/03/2021 9:44:46</span>
                 </a>
             </li>
         </ul>
@@ -107,7 +107,7 @@
 						<i class="fa fa-exclamation-circle"></i>
 					</a>
 					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																				<div class="dropdown-divider"></div>
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>						<a status="fail" class="dropdown-item" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>																														<div class="dropdown-divider"></div>
 						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 					</ul>
 				</li>
@@ -115,25 +115,25 @@
         </div>
         <div class="test-list-wrapper scrollable">
             <ul class="test-list-item">
-					<li class="test-item" status="pass" author="" device="" tag="" test-id="1"> 
-						<div class="status-avatar pass-bg">
-							<i class="fa fa-check text-white"></i>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="1"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
 						</div>
 						<div class="open-test">
 							<div class="test-detail"> 
-								<p class="name">dbTests</p> 
-								<p class="duration text-sm">0h:0m:17s+353ms</p> 
-								<span class="datetime">20:04:03 pm</span>
+								<p class="name">Login</p> 
+								<p class="duration text-sm">0h:0m:24s+643ms</p> 
+								<span class="datetime">09:44:46 am</span>
 							</div>
 						</div>
 						<div class="test-contents d-none">
 							<div class="detail-head">
 								<div class="p-v-10 d-inline-block">	
 									<div class="info">
-										<h5 class="test-status text-pass">dbTests</h5>
-										<span class='badge badge-success'>20/12/2020 20:04:03</span>
-										<span class='badge badge-danger'>20/12/2020 20:04:20</span>
-										<span class='badge badge-default'>0h:0m:17s+353ms</span>
+										<h5 class="test-status text-fail">Login</h5>
+										<span class='badge badge-success'>31/03/2021 9:44:46</span>
+										<span class='badge badge-danger'>31/03/2021 9:45:10</span>
+										<span class='badge badge-default'>0h:0m:24s+643ms</span>
 									</div>
 																	</div>
 							</div>
@@ -142,7 +142,249 @@
 	<div class="card">
 		<div class="card-header" role="tab">
 			<div class="card-title pl-3">
-				<div class="node">Scenario: login with credentials from DB</div>
+				<div class="node">Scenario: perform login to website negative</div>
+				<div class="status-avatar float-left fail-bg">
+					<i class="fa fa-times text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\naama\Documents\OOP\AutomationProject_CSharp2\AutomationProject_CSharp\AutomationProject_CSharp\Screenshots\e999875c-29f9-4961-8c2b-05efeb146ed5.png' src='C:\Users\naama\Documents\OOP\AutomationProject_CSharp2\AutomationProject_CSharp\AutomationProject_CSharp\Screenshots\e999875c-29f9-4961-8c2b-05efeb146ed5.png' data-src='C:\Users\naama\Documents\OOP\AutomationProject_CSharp2\AutomationProject_CSharp\AutomationProject_CSharp\Screenshots\e999875c-29f9-4961-8c2b-05efeb146ed5.png'>                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I launch the website login page</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I enter the following details and click on login button</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon fail-bg">
+                                    <i class="fa fa-times text-white"></i>
+                                </span>
+                                <span>Then I should see my account</span>
+                            </div>
+			<div class="details">Expected string length 10 but was 14. Strings differ at index 0.
+  Expected: "MY ACCOUNT"
+  But was:  "AUTHENTICATION"
+  -----------^</div>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: perform login to website positive</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I launch the website login page</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I enter the following details and click on login button</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I should see my account</span>
+                            </div>
+                    </div>
+				</div>
+	</div>
+</div>
+						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="10"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">Purchase</p> 
+								<p class="duration text-sm">0h:0m:40s+584ms</p> 
+								<span class="datetime">09:45:11 am</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">Purchase</h5>
+										<span class='badge badge-success'>31/03/2021 9:45:11</span>
+										<span class='badge badge-danger'>31/03/2021 9:45:51</span>
+										<span class='badge badge-default'>0h:0m:40s+584ms</span>
+									</div>
+																	</div>
+							</div>
+
+<div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Perform a purchase as a logged user</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+                                                    <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I login with valid</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I mouse hover Dresses and select Summer Dresses</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I filter by small size</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I filter by in stock items</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I sort by Price: Lowest first</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I select the first dress on the list</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I add item to cart</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I proceed to checkout</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I accept the terms of service and checkout</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I select paying method of BankWire</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I confirm my order</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Then I get order complete message</span>
+                            </div>
+                    </div>
+				</div>
+	</div>
+</div>
+						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="24"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">SignUp</p> 
+								<p class="duration text-sm">0h:0m:26s+596ms</p> 
+								<span class="datetime">09:45:52 am</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">SignUp</h5>
+										<span class='badge badge-success'>31/03/2021 9:45:52</span>
+										<span class='badge badge-danger'>31/03/2021 9:46:18</span>
+										<span class='badge badge-default'>0h:0m:26s+596ms</span>
+									</div>
+																	</div>
+							</div>
+
+<div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Sign up to website_negative</div>
+				<div class="status-avatar float-left fail-bg">
+					<i class="fa fa-times text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+                    <div class="card-body">
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\naama\Documents\OOP\AutomationProject_CSharp2\AutomationProject_CSharp\AutomationProject_CSharp\Screenshots\a2a09920-c9be-471c-8d58-c402982bd61b.png' src='C:\Users\naama\Documents\OOP\AutomationProject_CSharp2\AutomationProject_CSharp\AutomationProject_CSharp\Screenshots\a2a09920-c9be-471c-8d58-c402982bd61b.png' data-src='C:\Users\naama\Documents\OOP\AutomationProject_CSharp2\AutomationProject_CSharp\AutomationProject_CSharp\Screenshots\a2a09920-c9be-471c-8d58-c402982bd61b.png'>                                                    <div class="d-flex align-items-center justify-content-start given" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>Given I launch the website login page</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I sign up to website with the following email</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start then" title="">
+                                <span class="alert-icon fail-bg">
+                                    <i class="fa fa-times text-white"></i>
+                                </span>
+                                <span>Then I get a message that email address has already been registered</span>
+                            </div>
+			<div class="details">no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='create_account_error']/ol/li"}
+  (Session info: chrome=89.0.4389.90)</div>
+                    </div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Scenario: Sign up to website_positive</div>
 				<div class="status-avatar float-left pass-bg">
 					<i class="fa fa-check text-white"></i>
 				</div>
@@ -160,13 +402,19 @@
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
                                 </span>
-                                <span>When I login with credentials from DB</span>
+                                <span>When I sign up to website with the following email</span>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start when" title="">
+                                <span class="alert-icon pass-bg">
+                                    <i class="fa fa-check text-white"></i>
+                                </span>
+                                <span>When I create an account with the following details</span>
                             </div>
                             <div class="d-flex align-items-center justify-content-start then" title="">
                                 <span class="alert-icon pass-bg">
                                     <i class="fa fa-check text-white"></i>
                                 </span>
-                                <span>Then I should see my account</span>
+                                <span>Then I go to my account</span>
                             </div>
                     </div>
 				</div>

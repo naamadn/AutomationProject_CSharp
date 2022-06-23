@@ -1,10 +1,6 @@
 ﻿using AutomationProject_CSharp.Extensions;
 using AutomationProject_CSharp.Utilities;
 using AutomationProject_CSharp.WorkFlows;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace AutomationProject_CSharp
@@ -26,11 +22,12 @@ namespace AutomationProject_CSharp
             webFlows.login("original.user@yandex.com", "123456");
         }
 
-        [When(@"I login with valid credentials")]
-        public void WhenILoginWithValidCredentials()
-        {
-            webFlows.login("original.user@yandex.com", "123456");
-        }
+        //[When(@"I login with valid credentials")]
+        //public void WhenILoginWithValidCredentials()
+        //{
+        //   webFlows.login("original.user@yandex.com", "123456");
+          
+        //}
 
         [When(@"I mouse hover Dresses and select Summer Dresses")]
         public void WhenIMouseHoverDressesAndSelectSummerDresses()
@@ -83,8 +80,8 @@ namespace AutomationProject_CSharp
             uiActions.click(Shipping_Page.btn_proceedToCheckout);
         }
 
-        [When(@"select paying method of BankWire")]
-        public void WhenSelectPayingMethodOfBankWire()
+        [When(@"I select paying method of BankWire")]
+        public void WhenISelectPayingMethodOfBankWire()
         {
             uiActions.click(paymentMethod_Page.btn_payByBankWire);
         }

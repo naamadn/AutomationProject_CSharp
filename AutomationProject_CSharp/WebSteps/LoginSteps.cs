@@ -1,11 +1,6 @@
 ﻿using AutomationProject_CSharp.Extensions;
 using AutomationProject_CSharp.Utilities;
 using AutomationProject_CSharp.WorkFlows;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
